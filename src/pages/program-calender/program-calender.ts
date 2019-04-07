@@ -31,10 +31,13 @@ export class ProgramCalenderPage {
 
   constructor(public navCtrl: NavController,public loadingCtrl: LoadingController,public toastCtrl: ToastController,  private http: Http, public navParams: NavParams, public menuCtrl: MenuController,private transfer: FileTransfer,) 
   {
-    this.writeCsvData();
-   
+    // this.writeCsvData();  
   }
-  writeCsvData() {
+
+  CSVUpload() {
+    window.location.href='http://127.0.0.1:8080/csv/';
+}
+/*   writeCsvData() {
     
     
       let data = this.extractData;
@@ -47,24 +50,18 @@ export class ProgramCalenderPage {
    
       this.http.post('http://127.0.0.1:8080/ionicphp/program_calender.php',data, options)
       .map(res => res.json())
-      .subscribe( 
-  
-      );
+      .subscribe();
 }
-  
-
   extractData(res){
-    let csvData = res['_body'] || '';
-    let parsedData = papa.parse(csvData).data;
+      let csvData = res['_body'] || '';
+      let parsedData = papa.parse(csvData).data;
 
-    this.headerRow = parsedData[0];
+      this.headerRow = parsedData[0];
+      
+      parsedData.splice(0, 1);
+      this.csvData = parsedData;
     
-    parsedData.splice(0, 1);
-    this.csvData = parsedData;
-
-  }
-
-  
+} */
   
   CoursesPage() {
     this.navCtrl.push(CoursesPage);

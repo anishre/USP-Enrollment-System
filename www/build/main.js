@@ -22,23 +22,23 @@ webpackEmptyAsyncContext.id = 120;
 
 var map = {
 	"../pages/courses/courses.module": [
-		289,
+		288,
 		4
 	],
 	"../pages/enroll-now/enroll-now.module": [
-		290,
+		289,
 		3
 	],
 	"../pages/home/home.module": [
-		291,
+		290,
 		2
 	],
 	"../pages/personal-details/personal-details.module": [
-		292,
+		291,
 		1
 	],
 	"../pages/program-calender/program-calender.module": [
-		293,
+		292,
 		0
 	]
 };
@@ -221,18 +221,18 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_register_register__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_courses_courses__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_home_home__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_enroll_now_enroll_now__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_personal_details_personal_details__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_tabs_tabs__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_tabs_tabs__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_program_calender_program_calender__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_file_transfer_ngx__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_auth_service_auth_service__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_auth_service_auth_service__ = __webpack_require__(287);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -436,7 +436,7 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 286:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -495,7 +495,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 287:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -541,7 +541,7 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 288:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -948,10 +948,8 @@ var PersonalDetailsPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_transfer_ngx__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_papaparse__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_papaparse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_papaparse__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_map__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -961,7 +959,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -988,26 +985,37 @@ var ProgramCalenderPage = /** @class */ (function () {
         this.transfer = transfer;
         this.csvData = [];
         this.headerRow = [];
-        this.writeCsvData();
+        // this.writeCsvData();  
     }
     ProgramCalenderPage_1 = ProgramCalenderPage;
-    ProgramCalenderPage.prototype.writeCsvData = function () {
-        var data = this.extractData;
-        var headers = new __WEBPACK_IMPORTED_MODULE_6__angular_http__["a" /* Headers */]();
-        headers.append("Accept", 'application/json');
-        headers.append('Content-Type', 'application/json');
-        var options = new __WEBPACK_IMPORTED_MODULE_6__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        this.http.post('http://127.0.0.1:8080/ionicphp/program_calender.php', data, options)
-            .map(function (res) { return res.json(); })
-            .subscribe();
+    ProgramCalenderPage.prototype.CSVUpload = function () {
+        window.location.href = 'http://127.0.0.1:8080/csv/';
     };
-    ProgramCalenderPage.prototype.extractData = function (res) {
-        var csvData = res['_body'] || '';
-        var parsedData = __WEBPACK_IMPORTED_MODULE_8_papaparse__["parse"](csvData).data;
-        this.headerRow = parsedData[0];
-        parsedData.splice(0, 1);
-        this.csvData = parsedData;
-    };
+    /*   writeCsvData() {
+        
+        
+          let data = this.extractData;
+    
+          var headers = new Headers();
+          headers.append("Accept", 'application/json');
+          headers.append('Content-Type', 'application/json' );
+          let options = new RequestOptions({ headers: headers });
+      
+       
+          this.http.post('http://127.0.0.1:8080/ionicphp/program_calender.php',data, options)
+          .map(res => res.json())
+          .subscribe();
+    }
+      extractData(res){
+          let csvData = res['_body'] || '';
+          let parsedData = papa.parse(csvData).data;
+    
+          this.headerRow = parsedData[0];
+          
+          parsedData.splice(0, 1);
+          this.csvData = parsedData;
+        
+    } */
     ProgramCalenderPage.prototype.CoursesPage = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__courses_courses__["a" /* CoursesPage */]);
     };
@@ -1040,7 +1048,7 @@ var ProgramCalenderPage = /** @class */ (function () {
     };
     ProgramCalenderPage = ProgramCalenderPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-program-calender',template:/*ion-inline-start:"C:\Users\anish\Ionic\USP_ES-v5\src\pages\program-calender\program-calender.html"*/'<ion-header>\n\n    <ion-navbar>\n      <img src="assets/imgs/USP_logo.jpg" width="40px" style="display:inline-block" height="100px" width="180px"/>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="showFilters()">\n          <ion-icon name="funnel"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-header>\n  \n  \n    <ion-menu [content]="content1" side="left" id="filters-5">\n        Menu\n        <ion-item>\n          <button  ion-button (click)="hideFilters()">\n            Home\n          </button>\n        </ion-item>\n        <ion-item>\n            <button  ion-button (click)="CoursesPage()">\n              Courses\n            </button>\n          </ion-item>\n          <ion-item>\n              <button  ion-button (click)="EnrollNowPage()">\n                Enroll Now\n              </button>\n            </ion-item>\n            <ion-item>\n              <button  ion-button (click)="hideFilters()">\n                My Details\n              </button>\n            </ion-item>\n                <ion-item>\n                    <button  ion-button (click)="ProgramCalenderPage()">\n                      Program Calender\n                    </button>\n                  </ion-item>\n                  <ion-item>\n                <button  ion-button (click)="LoginPage()">\n                  Logout\n                </button>\n              </ion-item>\n      </ion-menu>\n  \n    <ion-content padding #content1>\n      <ion-item *ngFor = "let item of items">\n  \n      <h2> {{item.username}}  </h2>\n    </ion-item>\n\n    <label class="myFakeUploadButton" for="writeCsvData">Upload</label>\n    <input type="file" id="myFileInput">\n    \n    <button  ion-button (click)="writeCsvData()">\n        Upload\n      </button>\n  </ion-content>\n  '/*ion-inline-end:"C:\Users\anish\Ionic\USP_ES-v5\src\pages\program-calender\program-calender.html"*/,
+            selector: 'page-program-calender',template:/*ion-inline-start:"C:\Users\anish\Ionic\USP_ES-v5\src\pages\program-calender\program-calender.html"*/'<ion-header>\n\n    <ion-navbar>\n      <img src="assets/imgs/USP_logo.jpg" width="40px" style="display:inline-block" height="100px" width="180px"/>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="showFilters()">\n          <ion-icon name="funnel"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-header>\n  \n  \n    <ion-menu [content]="content1" side="left" id="filters-5">\n        Menu\n        <ion-item>\n          <button  ion-button (click)="hideFilters()">\n            Home\n          </button>\n        </ion-item>\n        <ion-item>\n            <button  ion-button (click)="CoursesPage()">\n              Courses\n            </button>\n          </ion-item>\n          <ion-item>\n              <button  ion-button (click)="EnrollNowPage()">\n                Enroll Now\n              </button>\n            </ion-item>\n            <ion-item>\n              <button  ion-button (click)="hideFilters()">\n                My Details\n              </button>\n            </ion-item>\n                <ion-item>\n                    <button  ion-button (click)="ProgramCalenderPage()">\n                      Program Calender\n                    </button>\n                  </ion-item>\n                  <ion-item>\n                <button  ion-button (click)="LoginPage()">\n                  Logout\n                </button>\n              </ion-item>\n      </ion-menu>\n  \n    <ion-content padding #content1>\n      <ion-item *ngFor = "let item of items">\n  \n      <h2> {{item.username}}  </h2>\n    </ion-item>\n\n<!--     <label class="myFakeUploadButton" for="writeCsvData">Upload</label>\n    <input type="file" id="myFileInput"> -->\n    \n    <button  ion-button (click)="CSVUpload()">\n        Upload\n      </button>\n\n  </ion-content>\n  '/*ion-inline-end:"C:\Users\anish\Ionic\USP_ES-v5\src\pages\program-calender\program-calender.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */], __WEBPACK_IMPORTED_MODULE_6__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_transfer_ngx__["a" /* FileTransfer */]])
     ], ProgramCalenderPage);

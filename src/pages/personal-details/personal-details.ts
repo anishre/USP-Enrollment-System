@@ -16,6 +16,9 @@ import 'rxjs/add/operator/map';
  * Ionic pages and navigation.
  */
 
+/**
+ * Ionic page
+ */
 @IonicPage()
 @Component({
   selector: 'page-personal-details',
@@ -30,46 +33,87 @@ export class PersonalDetailsPage {
   items: any;
   
 
+  /**
+   * Creates an instance of personal details page.
+   * @param navCtrl 
+   * @param http 
+   * @param loading 
+   * @param navParams 
+   * @param menuCtrl 
+   */
   constructor(public navCtrl: NavController, private http: Http, public loading: LoadingController, public navParams: NavParams, public menuCtrl: MenuController) {
     
   }
   
 
+  /**
+   * Ions view did load
+   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad PersonalDetailsPage');
   }
+  /**
+   * Ions view did enter
+   */
   ionViewDidEnter() {
     this.menuCtrl.enable(true, 'filters-4')
   }
 
+  /**
+   * Courses page
+   */
   CoursesPage() {
     this.navCtrl.push(CoursesPage);
   }
+  /**
+   * Programs calender page
+   */
   ProgramCalenderPage() {
     this.navCtrl.push(ProgramCalenderPage);
   }
+  /**
+   * Enrolls now page
+   */
   EnrollNowPage() {
     this.navCtrl.push(EnrollNowPage);
   }
 
+  /**
+   * Homes page
+   */
   HomePage() {
     this.navCtrl.popToRoot();
   }
+  /**
+   * Personals details page
+   */
   PersonalDetailsPage(){
     this.navCtrl.push(PersonalDetailsPage);
   }
+  /**
+   * Logins page
+   */
   LoginPage() {
     this.navCtrl.push(LoginPage);
   }
 
+  /**
+   * Shows filters
+   */
   showFilters() {
     this.menuCtrl.open('filters-4');
   }
 
+  /**
+   * Hides filters
+   */
   hideFilters() {
     this.menuCtrl.close('filters-4');
   }
   
+  /**
+   * on init
+   */
   ngOnInit() {
     this.username = this.navParams.get('username');
 

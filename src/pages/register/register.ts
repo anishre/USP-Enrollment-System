@@ -5,6 +5,9 @@ import {Http, Headers, RequestOptions}  from "@angular/http";
 import { LoadingController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 
+/**
+ * Component
+ */
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html'
@@ -12,16 +15,29 @@ import 'rxjs/add/operator/map';
 export class RegisterPage {
 
 
+/**
+ * View child of register page
+ */
 @ViewChild("email") email;
 @ViewChild("username") username;
 @ViewChild("mobile") mobile;
 @ViewChild("password") password;
 
 
+  /**
+   * Creates an instance of register page.
+   * @param navCtrl 
+   * @param alertCtrl 
+   * @param http 
+   * @param loading 
+   */
   constructor(public navCtrl: NavController, public alertCtrl: AlertController,  private http: Http,  public loading: LoadingController) {
 
   }
 
+  /**
+   * Registers register page
+   */
   Register(){
  //// check to confirm the username, email, telephone and password fields are filled
 

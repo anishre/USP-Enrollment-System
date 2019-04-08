@@ -17,6 +17,9 @@ import { ProgramCalenderPage } from '../program-calender/program-calender';
  * Ionic pages and navigation.
  */
 
+/**
+ * Ionic page
+ */
 @IonicPage()
 @Component({
   selector: 'page-enroll-now',
@@ -27,11 +30,23 @@ items: any;
 username:any;
 
 
+  /**
+   * Creates an instance of enroll now page.
+   * @param navCtrl 
+   * @param alertCtrl 
+   * @param loading 
+   * @param navParams 
+   * @param http 
+   * @param menuCtrl 
+   */
   constructor(public navCtrl: NavController,public alertCtrl: AlertController,public loading: LoadingController, public navParams: NavParams,public http:Http, public menuCtrl: MenuController) {
   this.enrollement();
   
   }
 
+  /**
+   * Enrollements enroll now page
+   */
   enrollement(){
     
     var headers = new Headers();
@@ -59,6 +74,9 @@ username:any;
         });
     });
   }
+  /**
+   * Registers course
+   */
   Register_course(){
     //// check to confirm the username, email, telephone and password fields are filled
     this.username = this.navParams.get('username');
@@ -109,37 +127,65 @@ username:any;
     }
    
    
+  /**
+   * Courses page
+   */
   CoursesPage() {
     this.navCtrl.push(CoursesPage);
   }
+  /**
+   * Programs calender page
+   */
   ProgramCalenderPage() {
     this.navCtrl.push(ProgramCalenderPage);
   }
+  /**
+   * Enrolls now page
+   */
   EnrollNowPage() {
     this.navCtrl.push(EnrollNowPage);
   }
 
+  /**
+   * Homes page
+   */
   HomePage() {
     this.navCtrl.popToRoot();
   }
+  /**
+   * Logins page
+   */
   LoginPage() {
     this.navCtrl.push(LoginPage);
   }
+  /**
+   * Personals details page
+   */
   PersonalDetailsPage(){
     this.navCtrl.push(PersonalDetailsPage);
   }
+  /**
+   * Ions view did enter
+   */
   ionViewDidEnter() {
     this.menuCtrl.enable(true, 'filters-3')
   }
+  /**
+   * Shows filters
+   */
   showFilters() {
     this.menuCtrl.open('filters-3');
   }
 
+  /**
+   * Hides filters
+   */
   hideFilters() {
     this.menuCtrl.close('filters-3');
   }
-
-  
+  /**
+   * Ions view did load
+   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad EnrollNowPage');
   }

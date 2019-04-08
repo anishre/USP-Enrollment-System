@@ -6,6 +6,10 @@ import { HomePage } from './../home/home';
 import { LoadingController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 
+
+/**
+ * Component
+ */
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
@@ -16,18 +20,28 @@ export class LoginPage {
   @ViewChild("password") password;
   data: string;
   items: any;
-
+  /**
+   * Creates an instance of login page.
+   * @param navCtrl 
+   * @param alertCtrl 
+   * @param http 
+   * @param loading 
+   */
   constructor( public navCtrl: NavController, public alertCtrl: AlertController,
     private http: Http, public loading: LoadingController) {
 
   }
  
+  /**
+   * Signs up
+   */
   signUp() {
     this.navCtrl.push(RegisterPage);
   }
- 
 
- 
+  /**
+   * Signs in
+   */
   signIn() {
 
     //// check to confirm the username and password fields are filled
@@ -63,7 +77,7 @@ export class LoginPage {
       let options = new RequestOptions({
         headers: headers
       });
-
+      
       let data = {
         username: this.username.value,
         password: this.password.value
@@ -74,7 +88,7 @@ export class LoginPage {
       });
 
       loader.present().then(() => {
-
+        //calls API that posts the entered data to the database in JSON format
         this.http.post('http://localhost:8080/ionicphp/login.php', data, options)
           .map(res => res.json())
           .subscribe(res => {

@@ -15,6 +15,9 @@ import 'rxjs/add/operator/map';
  * Ionic pages and navigation.
  */
 
+/**
+ * Ionic page
+ */
 @IonicPage()
 @Component({
   selector: 'page-home',
@@ -28,18 +31,38 @@ export class HomePage {
   items: any;
 
 
+  /**
+   * Creates an instance of home page.
+   * @param navCtrl 
+   * @param navParams 
+   * @param http 
+   * @param loading 
+   * @param menuCtrl 
+   */
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http, public loading: LoadingController, public menuCtrl: MenuController) {}
   
+  /**
+   * Ions view did enter
+   */
   ionViewDidEnter() {
     this.menuCtrl.enable(true, 'filters-1')
   }
 
+  /**
+   * Courses page
+   */
   CoursesPage() {
     this.navCtrl.push(CoursesPage);
   }
+  /**
+   * Programs calender page
+   */
   ProgramCalenderPage() {
     this.navCtrl.push(ProgramCalenderPage);
   }
+  /**
+   * Enrolls now page
+   */
   EnrollNowPage() {
     let data = {
       username: this.username
@@ -47,29 +70,50 @@ export class HomePage {
     this.navCtrl.push(EnrollNowPage,data);
   }
 
+  /**
+   * Homes page
+   */
   HomePage() {
     this.navCtrl.popToRoot();
   }
+  /**
+   * Personals details page
+   */
   PersonalDetailsPage(){
     let data = {
       username: this.username
     }
     this.navCtrl.push(PersonalDetailsPage,data);
   }
+  /**
+   * Logins page
+   */
   LoginPage() {
     this.navCtrl.push(LoginPage);
   }
 
+  /**
+   * Shows filters
+   */
   showFilters() {
     this.menuCtrl.open('filters-1');
   }
 
+  /**
+   * Hides filters
+   */
   hideFilters() {
     this.menuCtrl.close('filters-1');
   }
+  /**
+   * Ions view did load
+   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
+  /**
+   * Backs to welcome
+   */
   backToWelcome() {
 
     const root = this.app.getRootNav();
@@ -80,6 +124,9 @@ export class HomePage {
 
  
 
+  /**
+   * Logouts home page
+   */
   logout() {
 
     //Api Token Logout
@@ -91,6 +138,9 @@ export class HomePage {
     setTimeout(() => this.backToWelcome(), 1000);
 
   }
+  /**
+   * on init
+   */
   ngOnInit() {
     this.username = this.navParams.get('username');
 

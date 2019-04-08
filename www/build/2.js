@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 290:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,6 +18,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+/**
+ * Ng module
+ */
 var HomePageModule = /** @class */ (function () {
     function HomePageModule() {
     }

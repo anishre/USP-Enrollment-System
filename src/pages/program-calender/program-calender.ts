@@ -18,6 +18,9 @@ import 'rxjs/add/operator/map';
  * Ionic pages and navigation.
  */
 
+/**
+ * Ionic page
+ */
 @IonicPage()
 @Component({
   selector: 'page-program-calender',
@@ -29,11 +32,24 @@ export class ProgramCalenderPage {
   headerRow: any[] = [];
   
 
+  /**
+   * Creates an instance of program calender page.
+   * @param navCtrl 
+   * @param loadingCtrl 
+   * @param toastCtrl 
+   * @param http 
+   * @param navParams 
+   * @param menuCtrl 
+   * @param transfer 
+   */
   constructor(public navCtrl: NavController,public loadingCtrl: LoadingController,public toastCtrl: ToastController,  private http: Http, public navParams: NavParams, public menuCtrl: MenuController,private transfer: FileTransfer,) 
   {
     // this.writeCsvData();  
   }
 
+  /**
+   * Csvuploads program calender page
+   */
   CSVUpload() {
     window.location.href='http://127.0.0.1:8080/csv/';
 }
@@ -63,36 +79,66 @@ export class ProgramCalenderPage {
     
 } */
   
+  /**
+   * Courses page
+   */
   CoursesPage() {
     this.navCtrl.push(CoursesPage);
   }
+  /**
+   * Programs calender page
+   */
   ProgramCalenderPage() {
     this.navCtrl.push(ProgramCalenderPage);
   }
 
+  /**
+   * Enroll now page
+   */
   EnrollNowPage() {
     this.navCtrl.push(EnrollNowPage);
   }
 
+  /**
+   * Home page
+   */
   HomePage() {
     this.navCtrl.popToRoot();
   }
+  /**
+   * Personal details page
+   */
   PersonalDetailsPage(){
     this.navCtrl.push(PersonalDetailsPage);
   }
+  /**
+   * Login page
+   */
   LoginPage() {
     this.navCtrl.push(LoginPage);
   }
+  /**
+   * Ions view did enter
+   */
   ionViewDidEnter() {
     this.menuCtrl.enable(true, 'filters-5')
   }
+  /**
+   * Shows filters
+   */
   showFilters() {
     this.menuCtrl.open('filters-5');
   }
 
+  /**
+   * Hides filters
+   */
   hideFilters() {
     this.menuCtrl.close('filters-5');
   }
+  /**
+   * Ions view did load
+   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoursesPage');
   }

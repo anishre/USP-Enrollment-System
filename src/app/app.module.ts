@@ -20,6 +20,9 @@ import { ProgramCalenderPage } from '../pages/program-calender/program-calender'
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
+/**
+ * Ng module
+ */
 @NgModule({
   declarations: [
     MyApp,
